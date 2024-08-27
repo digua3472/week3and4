@@ -1,6 +1,7 @@
 .header {
   background: $primary;
   padding: 16px 0;
+  
   .container {
     display: flex;
     justify-content: space-between;
@@ -9,46 +10,46 @@
       align-items: flex-start;
     }
   }
-}
 
-.logo {
-  width: 80px;
-  height: 48px;
-  @include mobile-larger {
-    margin-left: 12px;
-    margin-bottom: 12px;
-  }
-}
-
-.nav {
-  font-size: 20px;
-  color: #fff;
-  @include mobile-larger {
-    width: 100%;
-    flex-wrap: wrap;
-    font-size: 16px;
-  }
-
-  &-item {
+  .logo {
+    width: 80px;
+    height: 48px;
     @include mobile-larger {
-      width: 50%;
+      margin-left: 12px;
+      margin-bottom: 12px;
+    }
+  }
+  
+  .nav {
+    font-size: 20px;
+    color: #fff;
+    @include mobile-larger {
+      width: 100%;
       flex-wrap: wrap;
-      border: 1px solid #fff;
-      text-align: center;
+      font-size: 16px;
+    }
+  
+    &-item {
+      @include mobile-larger {
+        width: 50%;
+        flex-wrap: wrap;
+        border: 1px solid #fff;
+        text-align: center;
+      }
+    }
+  
+    &-item a {
+      padding: 8px 32px;
+      @include mobile-larger {
+        padding: 12px 0;
+      }
     }
   }
-
-  &-item a {
-    padding: 8px 32px;
-    @include mobile-larger {
-      padding: 12px 0;
+  
+  @include mobile-larger {
+    .px-sm-0 {
+      padding-left: 0;
+      padding-right: 0;
     }
-  }
-}
-
-@include mobile-larger {
-  .px-sm-0 {
-    padding-left: 0;
-    padding-right: 0;
   }
 }

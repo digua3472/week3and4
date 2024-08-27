@@ -1,4 +1,98 @@
 .footer{
-  background: #69F0AE;
-  font-size: 64px;
+  background: $primary;
+  padding-top: 48px;
+  padding-bottom: 32px;
+  color: #fff;
+  @include mobile-larger {
+    padding-top: 24px;
+    padding-bottom: 16px;
+  }
+
+  &-header {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    @include mobile-larger {
+      padding-bottom: 24px;
+      margin-bottom: 16px;
+    }
+  }
+
+  .nav {
+    font-size: 16px;
+    padding-bottom: 36px;
+    @include mobile-larger {
+      display: none;
+    }
+
+    &-item a {
+      padding: 8px 24px;
+    }
+  }
+
+  .contact {
+    font-size: 36px;
+    font-family: "Noto Sans TC", sans-serif;
+    @include mobile-larger {
+      font-size: 16px;
+    }
+
+    .material-symbols-outlined {
+      font-size: 48px;
+      margin-right: 16px;
+      vertical-align: middle;
+      @include mobile-larger {
+        font-size: 24px;
+        margin-right: 8px;
+      }
+    }
+    li:not(last-child) {
+      margin-bottom: 8px;
+    }
+  }
+  
+  .social {
+    img{
+      width: 48px;
+      @include mobile-larger {
+        width: 24px;
+      }
+    }
+
+    a {
+      padding: 0 16px ;
+      @include table {
+        padding: 0 8px;
+      }
+      @include mobile-larger {
+        padding: 0 4px;
+      }
+    }
+  }
+
+  .copyright {
+    @include mobile-larger {
+      flex-direction: column;
+    }
+    &-text {
+      @include mobile-larger {
+        margin-bottom: 8px;
+      }
+    }
+    .privacy {
+      font-size: 14px;
+      @include mobile-larger {
+        flex-direction: column;
+        font-size: 16px;
+      }
+    }
+
+    .privacy a {
+      padding: 0 24px;
+      @include mobile-larger {
+        padding-left: 0;
+        margin-bottom: 8px;
+      }
+    }
+  }
 }
