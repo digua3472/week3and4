@@ -1,3 +1,111 @@
-.index-title {
-  font-size: 100px;
+//banner
+.banner {
+  background-image: url(../images/home-header.png);
+  background-size: cover;
+  height: calc(100vh - 80px);
+  color: $secondary;
+  @include table {
+    background-image: url(../images/home-header-sm.png);
+  }
+  @include mobile-larger {
+    height: calc(100vh - 176px);
+  }
+
+  &-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  &-text {
+    font-size: 36px;
+    @include mobile-larger {
+      font-size: 16px;
+    }
+  }
+
+  &-title {
+    font-size: 64px;
+    font-weight: 700;
+    @include mobile-larger {
+      font-size: 24px;
+    }
+  }
+
+  &-btn {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    background-color: $primary;
+    padding: 6px 12px;
+    margin-top: 4px;
+    @include mobile-larger {
+      margin-top: 8px;
+    }
+  }
+}
+
+//feature
+.feature {
+  background: $bg-light;
+  color: $secondary;
+  padding: 80px 0;
+  @include mobile-larger {
+    padding: 40px 0;
+  }
+  .container {
+    padding: 0 12px;
+  }
+  &-title {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    @include mobile-larger {
+      font-size: 24px;
+    }
+  }
+
+  &-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  
+
+    img {
+      width: 100px;
+      margin-bottom: 16px;
+    }
+  }
+  
+  .card-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  
+  .card-text {
+    color: #000;
+  }
+
+  &-column {
+    width: 25%;
+    padding: 0 12px;
+    margin-top: 24px;
+    @include table {
+      width: 50%;
+    }
+    @include mobile-larger {
+      width: 100%;
+
+    }
+  }
+
+  &-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -12px;
+  }
 }

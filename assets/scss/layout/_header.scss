@@ -1,8 +1,11 @@
 .header {
   background: $primary;
   padding: 16px 0;
+  @include mobile-larger {
+    padding-bottom: 0;
+  }
   
-  .container {
+  &-wrapper {
     display: flex;
     justify-content: space-between;
     @include mobile-larger {
