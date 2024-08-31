@@ -1,0 +1,29 @@
+.faq {
+    &-wrapper {
+        margin: 96px 0 80px 0;
+        @include table {
+            margin-top: 80px;
+        }
+        @include mobile-larger {
+            margin: 40px 0 64px 0;
+        }
+    }
+
+    &-desc {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 24px;
+    }
+
+    &-list {
+        li:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &-q {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+}

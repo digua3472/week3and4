@@ -28,6 +28,14 @@
   }
 
 //font
+.page-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 32px;
+    padding-left: 16px;
+    border-left: 8px solid $primary;
+}
+
 .section-title-secondary {
     color: $secondary;
     font-size: 48px;
