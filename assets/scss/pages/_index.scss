@@ -50,20 +50,30 @@
 //feature
 .feature {
   background: $bg-light;
-  color: $secondary;
   padding: 80px 0;
-  @include mobile-larger {
+  @include mobile {
     padding: 40px 0;
   }
-  .container {
-    padding: 0 12px;
+
+  &-list {
+    @include table {
+      li:not(:last-child):not(:nth-last-child(2)) {
+        margin-bottom: 24px;
+      }
+    }
+    @include mobile {
+      li:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
   }
-  &-title {
-    font-size: 48px;
-    font-weight: 700;
-    text-align: center;
-    @include mobile-larger {
-      font-size: 24px;
+
+  .col-3 {
+    @include table {
+      width: 50%;
+    }
+    @include mobile {
+      width: 100%;
     }
   }
 
@@ -72,40 +82,240 @@
     flex-direction: column;
     align-items: center;
     height: 100%;
-  
 
-    img {
+    > img {
       width: 100px;
       margin-bottom: 16px;
     }
   }
   
   .card-title {
+    color: $secondary;
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 8px;
   }
-  
-  .card-text {
-    color: #000;
+
+
+}
+
+//classic
+.classic {
+  margin: 80px 0;
+  @include mobile-larger {
+    margin: 40px 0;
   }
 
-  &-column {
-    width: 25%;
-    padding: 0 12px;
-    margin-top: 24px;
+  &-list {
+    @include table {
+      li:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  .col-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include table {
+      width: 100%;
+    }
+  }
+
+  &-card {
     @include table {
       width: 50%;
     }
     @include mobile-larger {
       width: 100%;
+    }
+  }
+  .card-title {
+    color: $primary;
+    font-family: "Roboto", sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    font-style: italic;
+    margin-top: 8px;
+  }
 
+}
+
+//cobrand
+.cobrand {
+  padding: 80px 0;
+  background-image: url(../images/index-bg.png);
+  background-size: cover;
+  @include table {
+    background-image: url(../images/index-bg-md.png);
+  }
+  @include mobile {
+    background-image: url(../images/index-bg-sm.png);
+    padding: 40px 0;
+  }
+
+  &-list {
+    @include table {
+      li:not(:last-child) {
+        margin-bottom: 24px;
+      }
     }
   }
 
-  &-row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -12px;
+  .card-img {
+      height: 240px;
+      background-position: center;
   }
+
+  .card-title {
+    color: $primary;
+    font-family: "Roboto" sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    font-style: italic;
+    background-color: #fff;
+    padding: 8px 0;
+  }
+
+  &-card {
+    width: 50%;
+    @include table {
+      width: 100%;
+      //margin-bottom: 24px;
+    }
+  }
+
+    &-wapper {
+      display: flex;
+      @include table {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+}
+
+//comment
+.comment {
+  padding: 80px 0;
+  @include mobile {
+    padding: 40px 0;
+  }
+  
+  &-list {
+    @include table {
+      li:not(:last-child):not(:nth-last-child(2)) {
+        margin-bottom: 24px;
+      }
+    }
+    @include mobile {
+      li:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  .col-3 {
+    @include table {
+      width: 50%;
+    }
+    @include mobile {
+      width: 100%;
+      margin-top: 16px;
+    }
+  }
+  &-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px #00000029;
+
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 16px;
+  
+  .name {
+    font-weight: 500;
+    margin-bottom: 8px;
+    }
+  .text {
+      margin-bottom: 72px;
+    }
+  .date {
+    font-size: 14px;
+    color: #707070;
+    margin-top: auto;
+    }
+  }
+}
+
+//contact
+.ContactUs {
+  background-color: $bg-light;
+  padding: 80px 0;
+  @include mobile {
+    padding: 40px 0;
+  }
+
+  &-wrapper {
+    max-width: 636px;
+    margin: 0 auto;
+    @include mobile-larger {
+      max-width: 576px;
+    }
+  }
+  
+  &-desc {
+    margin-bottom: 24px;
+    font-size: 20px;
+    @include table {
+      font-size: 16px;
+    }
+  }
+  
+  &-form {
+    display: block;
+  }
+  
+  &-form li:not(last-child) {
+    margin-bottom: 16px;
+  }
+
+  &-form-input {
+    width: 100%;
+    margin: 8px 0 0 0;
+    padding: 6px 12px;
+    background-color: $bg-light;
+    border: 1px solid #000;
+  }
+  
+  &-form-input::placeholder {
+    color: rgba(0, 0, 0, 0.2);
+  }
+  
+  &-form textarea {
+    resize: none;
+  }
+
+  &-btn {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 416px;
+    padding: 16px 0;
+    color: #fff;
+    background: $primary;
+    border: none;
+    margin-top: 48px;
+  }
+
+  &-btn:hover {
+    background: $secondary;
+  }
+
 }
